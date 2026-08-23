@@ -59,6 +59,85 @@ galleryFilters.forEach((btn) => {
   });
 });
 
+// WhatsApp chat widget
+const waChat = document.getElementById('waChat');
+const waChatToggle = document.getElementById('waChatToggle');
+const waChatClose = document.getElementById('waChatClose');
+const waChatBody = document.getElementById('waChatBody');
+const waChatActions = document.getElementById('waChatActions');
+const waChatCta = document.getElementById('waChatCta');
+const WA_NUMBER = '16475022938';
+const WA_FOLLOWUP = 'Entendido! Clique abaixo para continuar a conversa no WhatsApp. Respondemos em instantes! 😊';
+
+if (waChat && waChatToggle) {
+  const resetWaChat = () => {
+    waChatBody.querySelectorAll('.wa-chat__sent, .wa-chat__reply').forEach((el) => el.remove());
+    waChatActions.hidden = false;
+    waChatCta.hidden = true;
+  };
+
+  const closeWaChat = () => {
+    waChat.classList.remove('is-open');
+    waChatToggle.classList.remove('is-open');
+    waChatToggle.setAttribute('aria-expanded', 'false');
+  };
+
+  waChatToggle.addEventListener('click', () => {
+    const isOpen = waChat.classList.toggle('is-open');
+    waChatToggle.classList.toggle('is-open', isOpen);
+    waChatToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  waChatClose?.addEventListener('click', () => {
+    closeWaChat();
+    setTimeout(resetWaChat, 250);
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!waChat.classList.contains('is-open')) return;
+    if (!e.target.closest('.floating-actions')) {
+      closeWaChat();
+      setTimeout(resetWaChat, 250);
+    }
+  });
+
+  waChatActions?.querySelectorAll('.wa-chat__action').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const waText = btn.dataset.waText || '';
+
+      const sent = document.createElement('div');
+      sent.className = 'wa-chat__sent';
+      sent.innerHTML = btn.innerHTML;
+
+      const reply = document.createElement('div');
+      reply.className = 'wa-chat__bubble wa-chat__reply is-typed';
+      reply.textContent = WA_FOLLOWUP;
+
+      waChatActions.hidden = true;
+      waChatActions.insertAdjacentElement('afterend', reply);
+      waChatActions.insertAdjacentElement('afterend', sent);
+
+      waChatCta.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waText)}`;
+      waChatCta.hidden = false;
+
+      waChatBody.scrollTop = waChatBody.scrollHeight;
+    });
+  });
+}
+
+// Back-to-top button
+const backToTop = document.getElementById('backToTop');
+
+if (backToTop) {
+  window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('is-visible', window.scrollY > 480);
+  });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
 // Active nav link on scroll
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.navbar__nav a');
