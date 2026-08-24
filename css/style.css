@@ -373,7 +373,7 @@ svg{ display: block; }
   grid-template-columns: repeat(4, 1fr);
   background: var(--surface-card);
   border-radius: 20px;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 10px 10px 0 var(--blue-vivid), var(--shadow-soft);
 }
 .trust__item{
   display: flex;
@@ -590,13 +590,13 @@ svg{ display: block; }
   background: var(--surface-card);
   border-radius: var(--border-radius);
   padding: 38px 26px 32px;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 10px 10px 0 var(--blue-vivid), var(--shadow-soft);
   text-align: center;
   transition: transform var(--transition), box-shadow var(--transition);
 }
 .card:hover{
   transform: translateY(-8px);
-  box-shadow: var(--shadow-soft-hover);
+  box-shadow: 10px 10px 0 var(--blue-vivid), var(--shadow-soft-hover);
 }
 .card__icon{
   width: 64px; height: 64px;
@@ -653,12 +653,12 @@ svg{ display: block; }
   background: var(--surface-card);
   border-radius: var(--border-radius);
   padding: 32px;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 10px 10px 0 var(--blue-vivid), var(--shadow-soft);
   transition: transform var(--transition), box-shadow var(--transition);
 }
 .solution-card:hover{
   transform: translateY(-6px);
-  box-shadow: var(--shadow-soft-hover);
+  box-shadow: 10px 10px 0 var(--blue-vivid), var(--shadow-soft-hover);
 }
 .solution-card__icon{
   flex-shrink: 0;
@@ -1336,7 +1336,7 @@ svg{ display: block; }
   .hero__actions{ justify-content: center; }
 
   .trust{ margin-top: -40px; }
-  .trust__grid{ grid-template-columns: repeat(2, 1fr); border-radius: 16px; }
+  .trust__grid{ grid-template-columns: repeat(2, 1fr); border-radius: 16px; box-shadow: 8px 8px 0 var(--blue-vivid), var(--shadow-soft); }
   .trust__item:nth-child(3){ border-left: none; }
   .trust__item:nth-child(1), .trust__item:nth-child(2){ border-bottom: 1px solid var(--border-soft); }
 
@@ -1371,7 +1371,7 @@ svg{ display: block; }
   .hero{ padding: 56px 0; }
 
   .trust{ margin-top: -28px; }
-  .trust__grid{ grid-template-columns: 1fr; border-radius: 14px; }
+  .trust__grid{ grid-template-columns: 1fr; border-radius: 14px; box-shadow: 6px 6px 0 var(--blue-vivid), var(--shadow-soft); }
   .trust__item{ border-left: none; border-top: 1px solid var(--border-soft); padding: 24px; }
   .trust__item:first-child{ border-top: none; }
   .trust__item:nth-child(1), .trust__item:nth-child(2){ border-bottom: none; }
