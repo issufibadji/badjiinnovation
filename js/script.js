@@ -1,3 +1,22 @@
+// Dark / light theme toggle
+const themeToggle = document.getElementById('themeToggle');
+
+if (themeToggle) {
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+  const currentTheme = () => {
+    const saved = document.documentElement.getAttribute('data-theme');
+    if (saved === 'dark' || saved === 'light') return saved;
+    return prefersDark.matches ? 'dark' : 'light';
+  };
+
+  themeToggle.addEventListener('click', () => {
+    const next = currentTheme() === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+}
+
 // Mobile menu toggle
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
@@ -10,8 +29,13 @@ if (navToggle && navMenu) {
 
   navMenu.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
-      navToggle.classList.remove('is-open');
-      navMenu.classList.remove('is-open');
+      // Defer to the next tick so the browser finishes the anchor's default
+      // navigation before the menu (and the link itself) gets display:none —
+      // closing it synchronously here cancels the jump in some browsers.
+      setTimeout(() => {
+        navToggle.classList.remove('is-open');
+        navMenu.classList.remove('is-open');
+      }, 0);
     });
   });
 }
