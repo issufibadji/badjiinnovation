@@ -794,36 +794,12 @@ svg{ display: block; }
   padding: 100px 0 110px;
 }
 
-.gallery__filters{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 48px;
-}
-.gallery__filters button{
-  padding: 9px 22px;
-  border-radius: 30px;
-  border: 1.5px solid var(--border-soft);
-  background: var(--surface-card);
-  color: var(--text-heading);
-  font-weight: 700;
-  font-size: 13.5px;
-  cursor: pointer;
-  transition: border-color var(--transition), color var(--transition), background var(--transition);
-}
-.gallery__filters button:hover{ border-color: var(--blue-vivid); color: var(--blue-vivid); }
-.gallery__filters button.active{
-  background: var(--blue-vivid);
-  border-color: var(--blue-vivid);
-  color: #fff;
-}
-
 .gallery__grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
+.gallery__grid--showcase{ grid-template-columns: repeat(3, 1fr); }
 .gallery__card{
   background: var(--surface-card);
   border-radius: var(--border-radius);
@@ -838,29 +814,12 @@ svg{ display: block; }
 
 .gallery__screen{
   position: relative;
-  height: 220px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--blue-vivid), var(--navy));
+  height: 260px;
+  background-color: var(--navy);
+  background-size: cover;
+  background-position: top center;
   overflow: hidden;
 }
-.gallery__screen--alt{
-  background: linear-gradient(135deg, #2f7bf0, var(--blue-dark));
-}
-.gallery__dots{
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  display: flex;
-  gap: 6px;
-}
-.gallery__dots span{
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: rgba(255,255,255,.4);
-}
-.gallery__icon{ color: rgba(255,255,255,.85); }
 
 .gallery__overlay{
   position: absolute;
@@ -901,7 +860,25 @@ svg{ display: block; }
   font-size: 16.5px;
   font-weight: 800;
   color: var(--text-heading);
+  margin-bottom: 8px;
 }
+.gallery__desc{
+  font-size: 13.5px;
+  color: var(--gray);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+.gallery__visit{
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--blue-vivid);
+  transition: color var(--transition);
+}
+.gallery__visit span{ transition: transform var(--transition); }
+.gallery__visit:hover span{ transform: translate(2px, -2px); }
 
 /* =========================================================
    CONTATO
@@ -1424,8 +1401,6 @@ svg{ display: block; }
 
   .services__grid{ grid-template-columns: 1fr; }
   .gallery__grid{ grid-template-columns: 1fr; }
-  .gallery__filters{ gap: 8px; }
-  .gallery__filters button{ padding: 8px 16px; font-size: 12.5px; }
   .solutions__grid{ grid-template-columns: 1fr; }
   .solution-card{ flex-direction: column; text-align: center; align-items: center; }
   .why__grid{ grid-template-columns: 1fr; }
