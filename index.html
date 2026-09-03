@@ -1,612 +1,651 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BadjiInnovation — Soluções de TI Inovadoras para o Seu Negócio</title>
-<meta name="description" content="A BadjiInnovation desenvolve soluções tecnológicas inteligentes para empresas que buscam inovação, eficiência e crescimento.">
-<link rel="icon" type="image/png" href="assets/images/logo.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<script>
-  // Runs before first paint so a saved theme applies immediately (no flash).
-  (function(){
-    try{
-      var saved = localStorage.getItem('theme');
-      if (saved === 'dark' || saved === 'light') {
-        document.documentElement.setAttribute('data-theme', saved);
-      }
-    }catch(e){}
-  })();
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BadjiInnovation — Soluções de TI Inovadoras para o Seu Negócio</title>
+    <meta name="description" content="A BadjiInnovation desenvolve soluções tecnológicas inteligentes para empresas que buscam inovação, eficiência e crescimento.">
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        // Runs before first paint so a saved theme applies immediately (no flash).
+        (function() {
+            try {
+                var saved = localStorage.getItem('theme');
+                if (saved === 'dark' || saved === 'light') {
+                    document.documentElement.setAttribute('data-theme', saved);
+                }
+            } catch (e) {}
+        })();
+    </script>
 </head>
+
 <body>
 
-<!-- ===================== TOPBAR ===================== -->
-<div class="topbar">
-  <div class="container topbar__inner">
-    <div class="topbar__left">
-      <a href="mailto:contato@badjiinnovation.com" class="topbar__item">
-        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M3 6l9 7 9-7"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg>
-        contato@badjiinnovation.com
-      </a>
-      <a href="tel:+16475022938" class="topbar__item">
-        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.81.3 1.6.54 2.36a2 2 0 0 1-.45 2.11L8.09 9.09a16 16 0 0 0 6 6l.9-1.11a2 2 0 0 1 2.11-.45c.76.24 1.55.42 2.36.54A2 2 0 0 1 22 16.92z"/></svg>
-        +1 (647) 502-2938
-      </a>
-    </div>
-    <div class="topbar__right">
-      <span class="topbar__item">
+    <!-- ===================== TOPBAR ===================== -->
+    <div class="topbar">
+        <div class="container topbar__inner">
+            <div class="topbar__left">
+                <a href="mailto:contato@badjiinnovation.com" class="topbar__item">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M3 6l9 7 9-7"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg> contato@badjiinnovation.com
+                </a>
+                <a href="tel:+16475022938" class="topbar__item">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.81.3 1.6.54 2.36a2 2 0 0 1-.45 2.11L8.09 9.09a16 16 0 0 0 6 6l.9-1.11a2 2 0 0 1 2.11-.45c.76.24 1.55.42 2.36.54A2 2 0 0 1 22 16.92z"/></svg>                    +1 (647) 502-2938
+                </a>
+            </div>
+            <div class="topbar__right">
+                <span class="topbar__item">
         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
         Seg - Sex: 09h - 18h
       </span>
-      <div class="topbar__social">
-        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12"/></svg></a>
-        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M22 5.9c-.7.3-1.5.6-2.3.7.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5v.1a4.1 4.1 0 0 0 3.3 4 4.2 4.2 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.9A8.3 8.3 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.1"/></svg></a>
-        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zm7 0h3.8v1.7h.05c.53-1 1.83-2 3.77-2 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21h-4z"/></svg></a>
-        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.07 1.2.06 2 .24 2.7.5.8.3 1.4.7 2 1.3.6.6 1 1.2 1.3 2 .27.7.45 1.5.5 2.7.07 1.2.07 1.6.07 4.8s0 3.6-.07 4.8c-.06 1.2-.24 2-.5 2.7-.3.8-.7 1.4-1.3 2-.6.6-1.2 1-2 1.3-.7.27-1.5.45-2.7.5-1.2.07-1.6.07-4.8.07s-3.6 0-4.8-.07c-1.2-.06-2-.24-2.7-.5-.8-.3-1.4-.7-2-1.3-.6-.6-1-1.2-1.3-2-.27-.7-.45-1.5-.5-2.7C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.8c.06-1.2.24-2 .5-2.7.3-.8.7-1.4 1.3-2 .6-.6 1.2-1 2-1.3.7-.27 1.5-.45 2.7-.5C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.14 0-3.5 0-4.74.07-1 .05-1.6.2-1.97.35-.5.19-.85.42-1.22.8-.38.37-.6.72-.8 1.22-.14.36-.3.96-.35 1.97C3.8 8.5 3.8 8.86 3.8 12s0 3.5.07 4.74c.05 1 .2 1.6.35 1.97.2.5.42.85.8 1.22.37.38.72.6 1.22.8.36.14.96.3 1.97.35 1.24.07 1.6.07 4.74.07s3.5 0 4.74-.07c1-.05 1.6-.2 1.97-.35.5-.2.85-.42 1.22-.8.38-.37.6-.72.8-1.22.14-.36.3-.96.35-1.97.07-1.24.07-1.6.07-4.74s0-3.5-.07-4.74c-.05-1-.2-1.6-.35-1.97-.2-.5-.42-.85-.8-1.22-.37-.38-.72-.6-1.22-.8-.36-.14-.96-.3-1.97-.35C15.5 4 15.14 4 12 4zm0 3.6a4.4 4.4 0 1 1 0 8.8 4.4 4.4 0 0 1 0-8.8zm0 1.8a2.6 2.6 0 1 0 0 5.2 2.6 2.6 0 0 0 0-5.2zm5.6-2a1 1 0 1 1 0 2.1 1 1 0 0 1 0-2.1z"/></svg></a>
-      </div>
+                <div class="topbar__social">
+                    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12"/></svg></a>
+                    <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M22 5.9c-.7.3-1.5.6-2.3.7.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5v.1a4.1 4.1 0 0 0 3.3 4 4.2 4.2 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.9A8.3 8.3 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.1"/></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zm7 0h3.8v1.7h.05c.53-1 1.83-2 3.77-2 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21h-4z"/></svg></a>
+                    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.07 1.2.06 2 .24 2.7.5.8.3 1.4.7 2 1.3.6.6 1 1.2 1.3 2 .27.7.45 1.5.5 2.7.07 1.2.07 1.6.07 4.8s0 3.6-.07 4.8c-.06 1.2-.24 2-.5 2.7-.3.8-.7 1.4-1.3 2-.6.6-1.2 1-2 1.3-.7.27-1.5.45-2.7.5-1.2.07-1.6.07-4.8.07s-3.6 0-4.8-.07c-1.2-.06-2-.24-2.7-.5-.8-.3-1.4-.7-2-1.3-.6-.6-1-1.2-1.3-2-.27-.7-.45-1.5-.5-2.7C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.8c.06-1.2.24-2 .5-2.7.3-.8.7-1.4 1.3-2 .6-.6 1.2-1 2-1.3.7-.27 1.5-.45 2.7-.5C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.14 0-3.5 0-4.74.07-1 .05-1.6.2-1.97.35-.5.19-.85.42-1.22.8-.38.37-.6.72-.8 1.22-.14.36-.3.96-.35 1.97C3.8 8.5 3.8 8.86 3.8 12s0 3.5.07 4.74c.05 1 .2 1.6.35 1.97.2.5.42.85.8 1.22.37.38.72.6 1.22.8.36.14.96.3 1.97.35 1.24.07 1.6.07 4.74.07s3.5 0 4.74-.07c1-.05 1.6-.2 1.97-.35.5-.2.85-.42 1.22-.8.38-.37.6-.72.8-1.22.14-.36.3-.96.35-1.97.07-1.24.07-1.6.07-4.74s0-3.5-.07-4.74c-.05-1-.2-1.6-.35-1.97-.2-.5-.42-.85-.8-1.22-.37-.38-.72-.6-1.22-.8-.36-.14-.96-.3-1.97-.35C15.5 4 15.14 4 12 4zm0 3.6a4.4 4.4 0 1 1 0 8.8 4.4 4.4 0 0 1 0-8.8zm0 1.8a2.6 2.6 0 1 0 0 5.2 2.6 2.6 0 0 0 0-5.2zm5.6-2a1 1 0 1 1 0 2.1 1 1 0 0 1 0-2.1z"/></svg></a>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
-<!-- ===================== NAVBAR ===================== -->
-<header class="navbar" id="navbar">
-  <div class="container navbar__inner">
-    <a href="#inicio" class="navbar__brand">
-      <img src="assets/images/logo.png" alt="BadjiInnovation" class="navbar__logo">
-      <span class="navbar__brand-text">
+    <!-- ===================== NAVBAR ===================== -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar__inner">
+            <a href="#inicio" class="navbar__brand">
+                <img src="assets/images/logo.png" alt="BadjiInnovation" class="navbar__logo">
+                <span class="navbar__brand-text">
         Badji<span>Innovation</span>
-        <small>Fábrica de Software</small>
-      </span>
-    </a>
+                <small>Fábrica de Software</small>
+                </span>
+            </a>
 
-    <nav class="navbar__nav" id="navMenu">
-      <a href="#inicio" class="active">Início</a>
-      <a href="#sobre">Sobre Nós</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#solucoes">Soluções</a>
-      <a href="#experiencia">Resultados</a>
-      <a href="#galeria">Galeria</a>
-      <a href="#contato">Contato</a>
-    </nav>
+            <nav class="navbar__nav" id="navMenu">
+                <a href="#inicio" class="active">Início</a>
+                <a href="#sobre">Sobre Nós</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#solucoes">Soluções</a>
+                <a href="#experiencia">Resultados</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#contato">Contato</a>
+            </nav>
 
-    <a href="#contato" class="btn btn--primary navbar__cta">Fale Conosco</a>
+            <a href="#contato" class="btn btn--primary navbar__cta">Fale Conosco</a>
 
-    <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+            <button type="button" class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
       <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="4.2" y1="4.2" x2="5.9" y2="5.9"/><line x1="18.1" y1="18.1" x2="19.8" y2="19.8"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.2" y1="19.8" x2="5.9" y2="18.1"/><line x1="18.1" y1="5.9" x2="19.8" y2="4.2"/></svg>
       <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
     </button>
 
-    <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu">
+            <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu">
       <span></span><span></span><span></span>
     </button>
-  </div>
-</header>
+        </div>
+    </header>
 
-<!-- ===================== HERO ===================== -->
-<section class="hero" id="inicio">
-  <div class="container hero__grid">
-    <div class="hero__content reveal">
-      <p class="eyebrow">Mobile <span>&bull; Web &bull;</span> UI/UX <span>&bull; IA</span></p>
-      <h1 class="hero__title">Software sob medida.<br><span>Resultado real.</span></h1>
-      <p class="hero__text">Desenvolvemos aplicativos, sites, experiências de UI/UX e agentes de IA que transformam tecnologia em crescimento real para o seu negócio.</p>
-      <div class="hero__actions">
-        <a href="#contato" class="btn btn--primary">Fale Conosco <span>&rarr;</span></a>
-        <a href="#servicos" class="btn btn--outline">Nossos Serviços</a>
-      </div>
-    </div>
-    <div class="hero__media reveal" role="img" aria-label="Equipe BadjiInnovation trabalhando em soluções de tecnologia"></div>
-  </div>
-</section>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="inicio">
+        <div class="container hero__grid">
+            <div class="hero__content reveal">
+                <p class="eyebrow">Mobile <span>&bull; Web &bull;</span> UI/UX <span>&bull; IA</span></p>
+                <h1 class="hero__title">Software sob medida.<br><span>Resultado real.</span></h1>
+                <p class="hero__text">Desenvolvemos aplicativos, sites, experiências de UI/UX e agentes de IA que transformam tecnologia em crescimento real para o seu negócio.</p>
+                <div class="hero__actions">
+                    <a href="#contato" class="btn btn--primary">Fale Conosco <span>&rarr;</span></a>
+                    <a href="#servicos" class="btn btn--outline">Nossos Serviços</a>
+                </div>
+            </div>
+            <div class="hero__media reveal" role="img" aria-label="Equipe BadjiInnovation trabalhando em soluções de tecnologia"></div>
+        </div>
+    </section>
 
-<!-- ===================== FAIXA DE CONFIANÇA ===================== -->
-<section class="trust" id="experiencia">
-  <div class="container trust__grid">
-    <div class="trust__item">
-      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-      <span class="trust__num">10+</span>
-      <h3>Anos de Experiência</h3>
-    </div>
-    <div class="trust__item">
-      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>
-      <span class="trust__num">2K+</span>
-      <h3>Aplicações Desenvolvidas</h3>
-    </div>
-    <div class="trust__item">
-      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      <span class="trust__num">40+</span>
-      <h3>Especialistas</h3>
-    </div>
-    <div class="trust__item">
-      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-      <span class="trust__num">160+</span>
-      <h3>Projetos Realizados</h3>
-    </div>
-  </div>
-</section>
+    <!-- ===================== FAIXA DE CONFIANÇA ===================== -->
+    <section class="trust" id="experiencia">
+        <div class="container trust__grid">
+            <div class="trust__item">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                <span class="trust__num">10+</span>
+                <h3>Anos de Experiência</h3>
+            </div>
+            <div class="trust__item">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>
+                <span class="trust__num">2K+</span>
+                <h3>Aplicações Desenvolvidas</h3>
+            </div>
+            <div class="trust__item">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <span class="trust__num">40+</span>
+                <h3>Especialistas</h3>
+            </div>
+            <div class="trust__item">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <span class="trust__num">160+</span>
+                <h3>Projetos Realizados</h3>
+            </div>
+        </div>
+    </section>
 
-<!-- ===================== SOBRE NÓS ===================== -->
-<section class="about" id="sobre">
-  <span class="about__glow"></span>
-  <div class="container about__grid">
-    <div class="about__media reveal">
-      <span class="about__frame"></span>
-      <img src="assets/images/about.jpg" alt="Equipe da BadjiInnovation desenvolvendo um projeto de software">
-      <div class="about__badge">
-        <span class="about__badge-num">10+</span>
-        <span class="about__badge-label">Anos de<br>experiência</span>
-      </div>
-    </div>
+    <!-- ===================== SOBRE NÓS ===================== -->
+    <section class="about" id="sobre">
+        <span class="about__glow"></span>
+        <div class="container about__grid">
+            <div class="about__media reveal">
+                <span class="about__frame"></span>
+                <img src="assets/images/about.jpg" alt="Equipe da BadjiInnovation desenvolvendo um projeto de software">
+                <div class="about__badge">
+                    <span class="about__badge-num">10+</span>
+                    <span class="about__badge-label">Anos de<br>experiência</span>
+                </div>
+            </div>
 
-    <div class="about__content reveal">
-      <p class="eyebrow">Sobre <span>Nós</span></p>
-      <h2>Uma fábrica de software feita para tirar ideias do papel</h2>
-      <p class="about__text">A BadjiInnovation nasceu para ajudar empresas a transformar ideias em produtos digitais de verdade. Unimos design, engenharia e inteligência artificial para criar aplicativos, sites e experiências que resolvem problemas reais — do primeiro protótipo à operação em escala.</p>
-      <p class="about__text">Trabalhamos como um time estendido dos nossos clientes: acompanhamento próximo, comunicação direta e entregas contínuas em cada etapa do projeto.</p>
+            <div class="about__content reveal">
+                <p class="eyebrow">Sobre <span>Nós</span></p>
+                <h2>Uma fábrica de software feita para tirar ideias do papel</h2>
+                <p class="about__text">A BadjiInnovation nasceu para ajudar empresas a transformar ideias em produtos digitais de verdade. Unimos design, engenharia e inteligência artificial para criar aplicativos, sites e experiências que resolvem problemas reais — do primeiro
+                    protótipo à operação em escala.</p>
+                <p class="about__text">Trabalhamos como um time estendido dos nossos clientes: acompanhamento próximo, comunicação direta e entregas contínuas em cada etapa do projeto.</p>
 
-      <div class="about__pillars">
-        <div class="about__pillar">
-          <div class="about__pillar-icon">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-          </div>
-          <h4>Missão</h4>
-          <p>Transformar ideias em produtos digitais que geram resultado real.</p>
-        </div>
-        <div class="about__pillar">
-          <div class="about__pillar-icon">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-          </div>
-          <h4>Visão</h4>
-          <p>Ser referência em tecnologia sob medida para empresas em crescimento.</p>
-        </div>
-        <div class="about__pillar">
-          <div class="about__pillar-icon">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
-          <h4>Valores</h4>
-          <p>Transparência, agilidade e parceria de verdade com quem confia em nós.</p>
-        </div>
-      </div>
+                <div class="about__pillars">
+                    <div class="about__pillar">
+                        <div class="about__pillar-icon">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                        </div>
+                        <h4>Missão</h4>
+                        <p>Transformar ideias em produtos digitais que geram resultado real.</p>
+                    </div>
+                    <div class="about__pillar">
+                        <div class="about__pillar-icon">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        </div>
+                        <h4>Visão</h4>
+                        <p>Ser referência em tecnologia sob medida para empresas em crescimento.</p>
+                    </div>
+                    <div class="about__pillar">
+                        <div class="about__pillar-icon">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </div>
+                        <h4>Valores</h4>
+                        <p>Transparência, agilidade e parceria de verdade com quem confia em nós.</p>
+                    </div>
+                </div>
 
-      <a href="#servicos" class="btn btn--primary">Conheça Nossos Serviços <span>&rarr;</span></a>
-    </div>
-  </div>
-</section>
+                <a href="#servicos" class="btn btn--primary">Conheça Nossos Serviços <span>&rarr;</span></a>
+            </div>
+        </div>
+    </section>
 
-<!-- ===================== SERVIÇOS ===================== -->
-<section class="services" id="servicos">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-line"></span>
-      <h2>Nossos Serviços</h2>
-      <p>Soluções tecnológicas para transformar seu negócio</p>
-    </div>
+    <!-- ===================== SERVIÇOS ===================== -->
+    <section class="services" id="servicos">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-line"></span>
+                <h2>Nossos Serviços</h2>
+                <p>Soluções tecnológicas para transformar seu negócio</p>
+            </div>
 
-    <div class="services__grid">
-      <div class="card reveal">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
-        </div>
-        <h3>Aplicativos Mobile</h3>
-        <p>Apps nativos e híbridos para iOS e Android, com performance e usabilidade pensadas para o seu usuário.</p>
-        <a href="#contato" class="card__link">Saiba Mais <span>&rarr;</span></a>
-      </div>
+            <div class="services__grid">
+                <div class="card reveal">
+                    <div class="card__icon">
+                        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+                    </div>
+                    <h3>Aplicativos Mobile</h3>
+                    <p>Apps nativos e híbridos para iOS e Android, com performance e usabilidade pensadas para o seu usuário.</p>
+                    <a href="#contato" class="card__link">Saiba Mais <span>&rarr;</span></a>
+                </div>
 
-      <div class="card reveal">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-        </div>
-        <h3>Desenvolvimento Web</h3>
-        <p>Sites, plataformas e sistemas web modernos, rápidos e responsivos para qualquer dispositivo.</p>
-        <a href="#contato" class="card__link">Saiba Mais <span>&rarr;</span></a>
-      </div>
+                <div class="card reveal">
+                    <div class="card__icon">
+                        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <h3>Desenvolvimento Web</h3>
+                    <p>Sites, plataformas e sistemas web modernos, rápidos e responsivos para qualquer dispositivo.</p>
+                    <a href="#contato" class="card__link">Saiba Mais <span>&rarr;</span></a>
+                </div>
 
-      <div class="card reveal">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-        </div>
-        <h3>UI/UX Design</h3>
-        <p>Interfaces intuitivas e experiências de uso que aumentam engajamento, conversão e satisfação.</p>
-        <a href="#contato" class="card__link">Saiba Mais <span>&rarr;</span></a>
-      </div>
+                <div class="card reveal">
+                    <div class="card__icon">
+                        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Interfaces intuitivas e experiências de uso que aumentam engajamento, conversão e satisfação.</p>
+                    <a href="#contato" class="card__link">Saiba Mais <span>&rarr;</span></a>
+                </div>
 
-      <div class="card reveal">
-        <div class="card__icon">
-          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="16" height="11" rx="2"/><circle cx="12" cy="4" r="2"/><path d="M12 6v3"/><line x1="9" y1="14" x2="9" y2="15"/><line x1="15" y1="14" x2="15" y2="15"/></svg>
+                <div class="card reveal">
+                    <div class="card__icon">
+                        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="16" height="11" rx="2"/><circle cx="12" cy="4" r="2"/><path d="M12 6v3"/><line x1="9" y1="14" x2="9" y2="15"/><line x1="15" y1="14" x2="15" y2="15"/></svg>
+                    </div>
+                    <h3>Agentes de IA</h3>
+                    <p>Agentes de inteligência artificial que automatizam processos, atendem clientes e geram insights.</p>
+                    <a href="#contato" class="card__link">Saiba Mais <span>&rarr;</span></a>
+                </div>
+            </div>
         </div>
-        <h3>Agentes de IA</h3>
-        <p>Agentes de inteligência artificial que automatizam processos, atendem clientes e geram insights.</p>
-        <a href="#contato" class="card__link">Saiba Mais <span>&rarr;</span></a>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ===================== SOLUÇÕES ===================== -->
-<section class="solutions" id="solucoes">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-line"></span>
-      <h2>Nossas Soluções</h2>
-      <p>O que construímos para o seu negócio crescer</p>
-    </div>
+    <!-- ===================== SOLUÇÕES ===================== -->
+    <section class="solutions" id="solucoes">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-line"></span>
+                <h2>Nossas Soluções</h2>
+                <p>O que construímos para o seu negócio crescer</p>
+            </div>
 
-    <div class="solutions__grid">
-      <div class="solution-card reveal">
-        <div class="solution-card__icon">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
-        </div>
-        <div>
-          <h3>MVP e Validação de Produto</h3>
-          <p>Tiramos sua ideia do papel com um produto mínimo viável rápido e testável, pronto para validar o mercado antes de investir em escala.</p>
-        </div>
-      </div>
+            <div class="solutions__grid">
+                <div class="solution-card reveal">
+                    <div class="solution-card__icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+                    </div>
+                    <div>
+                        <h3>MVP e Validação de Produto</h3>
+                        <p>Tiramos sua ideia do papel com um produto mínimo viável rápido e testável, pronto para validar o mercado antes de investir em escala.</p>
+                    </div>
+                </div>
 
-      <div class="solution-card reveal">
-        <div class="solution-card__icon">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-        </div>
-        <div>
-          <h3>Sistemas Sob Medida</h3>
-          <p>Automatizamos processos internos com sistemas feitos sob medida para a realidade e as regras do seu negócio.</p>
-        </div>
-      </div>
+                <div class="solution-card reveal">
+                    <div class="solution-card__icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    </div>
+                    <div>
+                        <h3>Sistemas Sob Medida</h3>
+                        <p>Automatizamos processos internos com sistemas feitos sob medida para a realidade e as regras do seu negócio.</p>
+                    </div>
+                </div>
 
-      <div class="solution-card reveal">
-        <div class="solution-card__icon">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
-        </div>
-        <div>
-          <h3>Modernização de Sistemas</h3>
-          <p>Atualizamos sistemas legados com tecnologias modernas, mais performance, segurança e facilidade de manutenção.</p>
-        </div>
-      </div>
+                <div class="solution-card reveal">
+                    <div class="solution-card__icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+                    </div>
+                    <div>
+                        <h3>Modernização de Sistemas</h3>
+                        <p>Atualizamos sistemas legados com tecnologias modernas, mais performance, segurança e facilidade de manutenção.</p>
+                    </div>
+                </div>
 
-      <div class="solution-card reveal">
-        <div class="solution-card__icon">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/><rect x="4" y="4" width="16" height="16" rx="2"/></svg>
-        </div>
-        <div>
-          <h3>Automação com IA</h3>
-          <p>Implementamos fluxos e agentes de inteligência artificial que automatizam tarefas repetitivas e liberam tempo da sua equipe.</p>
-        </div>
-      </div>
-    </div>
+                <div class="solution-card reveal">
+                    <div class="solution-card__icon">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/><rect x="4" y="4" width="16" height="16" rx="2"/></svg>
+                    </div>
+                    <div>
+                        <h3>Automação com IA</h3>
+                        <p>Implementamos fluxos e agentes de inteligência artificial que automatizam tarefas repetitivas e liberam tempo da sua equipe.</p>
+                    </div>
+                </div>
+            </div>
 
-    <div class="solutions__cta reveal">
-      <a href="#contato" class="btn btn--primary">Vamos Conversar Sobre o Seu Projeto <span>&rarr;</span></a>
-    </div>
-  </div>
-</section>
+            <div class="solutions__cta reveal">
+                <a href="#contato" class="btn btn--primary">Vamos Conversar Sobre o Seu Projeto <span>&rarr;</span></a>
+            </div>
+        </div>
+    </section>
 
-<!-- ===================== POR QUE ESCOLHER (DIFERENCIAIS) ===================== -->
-<section class="why" id="diferenciais">
-  <div class="container why__layout">
-    <div class="why__content">
-      <p class="eyebrow">Diferenciais</p>
-      <h2 class="why__title reveal">Por que escolher a BadjiInnovation?</h2>
+    <!-- ===================== POR QUE ESCOLHER (DIFERENCIAIS) ===================== -->
+    <section class="why" id="diferenciais">
+        <div class="container why__layout">
+            <div class="why__content">
+                <p class="eyebrow">Diferenciais</p>
+                <h2 class="why__title reveal">Por que escolher a BadjiInnovation?</h2>
 
-      <div class="why__grid">
-        <div class="why__item reveal">
-          <span class="why__num">01</span>
-          <span class="why__hr"></span>
-          <h3>Tecnologia de Alta Qualidade</h3>
-          <p>Soluções robustas, seguras e preparadas para o crescimento.</p>
-        </div>
-        <div class="why__item reveal">
-          <span class="why__num">02</span>
-          <span class="why__hr"></span>
-          <h3>Suporte Especializado</h3>
-          <p>Equipe preparada pra ajudar sempre que sua empresa precisar.</p>
-        </div>
-        <div class="why__item reveal">
-          <span class="why__num">03</span>
-          <span class="why__hr"></span>
-          <h3>Garantia de Satisfação</h3>
-          <p>Entregamos soluções que atendem às necessidades reais do seu negócio.</p>
-        </div>
-        <div class="why__item reveal">
-          <span class="why__num">04</span>
-          <span class="why__hr"></span>
-          <h3>Agilidade e Eficiência</h3>
-          <p>Processos ágeis, objetivos claros e foco em resultados.</p>
-        </div>
-        <div class="why__item reveal">
-          <span class="why__num">05</span>
-          <span class="why__hr"></span>
-          <h3>Soluções Inteligentes</h3>
-          <p>Ferramentas que simplificam processos e ganham tempo da sua equipe.</p>
-        </div>
-        <div class="why__item reveal">
-          <span class="why__num">06</span>
-          <span class="why__hr"></span>
-          <h3>Fácil Utilização</h3>
-          <p>Interfaces intuitivas, pensadas para facilitar o uso por todos.</p>
-        </div>
-      </div>
-    </div>
+                <div class="why__grid">
+                    <div class="why__item reveal">
+                        <span class="why__num">01</span>
+                        <span class="why__hr"></span>
+                        <h3>Tecnologia de Alta Qualidade</h3>
+                        <p>Soluções robustas, seguras e preparadas para o crescimento.</p>
+                    </div>
+                    <div class="why__item reveal">
+                        <span class="why__num">02</span>
+                        <span class="why__hr"></span>
+                        <h3>Suporte Especializado</h3>
+                        <p>Equipe preparada pra ajudar sempre que sua empresa precisar.</p>
+                    </div>
+                    <div class="why__item reveal">
+                        <span class="why__num">03</span>
+                        <span class="why__hr"></span>
+                        <h3>Garantia de Satisfação</h3>
+                        <p>Entregamos soluções que atendem às necessidades reais do seu negócio.</p>
+                    </div>
+                    <div class="why__item reveal">
+                        <span class="why__num">04</span>
+                        <span class="why__hr"></span>
+                        <h3>Agilidade e Eficiência</h3>
+                        <p>Processos ágeis, objetivos claros e foco em resultados.</p>
+                    </div>
+                    <div class="why__item reveal">
+                        <span class="why__num">05</span>
+                        <span class="why__hr"></span>
+                        <h3>Soluções Inteligentes</h3>
+                        <p>Ferramentas que simplificam processos e ganham tempo da sua equipe.</p>
+                    </div>
+                    <div class="why__item reveal">
+                        <span class="why__num">06</span>
+                        <span class="why__hr"></span>
+                        <h3>Fácil Utilização</h3>
+                        <p>Interfaces intuitivas, pensadas para facilitar o uso por todos.</p>
+                    </div>
+                </div>
+            </div>
 
-    <div class="why__media reveal">
-      <span class="why__frame"></span>
-      <img src="assets/images/imgs.jpg" alt="Equipe da BadjiInnovation analisando dados e tecnologia">
-      <span class="why__play" aria-hidden="true">
+            <div class="why__media reveal">
+                <span class="why__frame"></span>
+                <img src="assets/images/imgs.jpg" alt="Equipe da BadjiInnovation analisando dados e tecnologia">
+                <span class="why__play" aria-hidden="true">
         <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
       </span>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== GALERIA ===================== -->
-<section class="gallery" id="galeria">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-line"></span>
-      <h2>Nossa Galeria</h2>
-      <p>Um pouco do que construímos para nossos clientes</p>
-    </div>
-
-    <div class="gallery__grid gallery__grid--showcase">
-      <div class="gallery__card reveal">
-        <div class="gallery__screen" style="background-image: url('assets/images/gallery/ideal-sao-joao-reis.jpg');">
-          <div class="gallery__overlay">
-            <a href="#contato" class="gallery__overlay-link">Quero um projeto assim <span>&rarr;</span></a>
-          </div>
+            </div>
         </div>
-        <div class="gallery__info">
-          <span class="gallery__tag">Web</span>
-          <h3>Ideal São João Reis</h3>
-          <p class="gallery__desc">Site institucional para construtora e imobiliária, com portfólio de obras e captação de orçamentos.</p>
-          <a href="https://idealsaojoaoreis.com/" target="_blank" rel="noopener" class="gallery__visit">Ver site <span>&#8599;</span></a>
+    </section>
+
+    <!-- ===================== GALERIA ===================== -->
+    <section class="gallery" id="galeria">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-line"></span>
+                <h2>Nossa Galeria</h2>
+                <p>Um pouco do que construímos para nossos clientes</p>
+            </div>
+
+            <div class="gallery__grid gallery__grid--showcase">
+                <div class="gallery__card reveal">
+                    <div class="gallery__screen" style="background-image: url('assets/images/gallery/ideal-sao-joao-reis.jpg');">
+                        <div class="gallery__overlay">
+                            <a href="#contato" class="gallery__overlay-link">Quero um projeto assim <span>&rarr;</span></a>
+                        </div>
+                    </div>
+                    <div class="gallery__info">
+                        <span class="gallery__tag">Web</span>
+                        <h3>Ideal São João Reis</h3>
+                        <p class="gallery__desc">Site institucional para construtora e imobiliária, com portfólio de obras e captação de orçamentos.</p>
+                        <a href="https://idealsaojoaoreis.com/" target="_blank" rel="noopener" class="gallery__visit">Ver site <span>&#8599;</span></a>
+                    </div>
+                </div>
+                <div class="gallery__card reveal">
+                    <div class="gallery__screen" style="background-image: url('assets/images/gallery/saloon-girl.jpg');">
+                        <div class="gallery__overlay">
+                            <a href="#contato" class="gallery__overlay-link">Quero um projeto assim <span>&rarr;</span></a>
+                        </div>
+                    </div>
+                    <div class="gallery__info">
+                        <span class="gallery__tag">Web</span>
+                        <h3>Luxe Hair</h3>
+                        <p class="gallery__desc">Site para salão de beleza, com apresentação de serviços, equipe e agendamento de horário online.</p>
+                        <a href="https://saloon-girl.vercel.app/" target="_blank" rel="noopener" class="gallery__visit">Ver site <span>&#8599;</span></a>
+                    </div>
+                </div>
+
+                <div class="gallery__card reveal">
+                    <div class="gallery__screen" style="background-image: url('assets/images/gallery/dr-joao-mendes.jpg');">
+                        <div class="gallery__overlay">
+                            <a href="#contato" class="gallery__overlay-link">Quero um projeto assim <span>&rarr;</span></a>
+                        </div>
+                    </div>
+                    <div class="gallery__info">
+                        <span class="gallery__tag">Web</span>
+                        <h3>Dr. João Mendes</h3>
+                        <p class="gallery__desc">Site para consultório de cardiologia, com agendamento de consultas e apresentação de especialidades.</p>
+                        <a href="https://dr-clinica.vercel.app/" target="_blank" rel="noopener" class="gallery__visit">Ver site <span>&#8599;</span></a>
+                    </div>
+                </div>
+
+                <div class="gallery__card reveal">
+                    <div class="gallery__screen" style="background-image: url('assets/images/gallery/issufi-badji-portfolio.jpg');">
+                        <div class="gallery__overlay">
+                            <a href="#contato" class="gallery__overlay-link">Quero um projeto assim <span>&rarr;</span></a>
+                        </div>
+                    </div>
+                    <div class="gallery__info">
+                        <span class="gallery__tag">Web</span>
+                        <h3>Issufi Badji — Portfólio</h3>
+                        <p class="gallery__desc">Site de portfólio pessoal, com apresentação profissional, serviços e depoimentos.</p>
+                        <a href="https://www.issufibadji.dev/" target="_blank" rel="noopener" class="gallery__visit">Ver site <span>&#8599;</span></a>
+                    </div>
+                </div>
+                <div class="gallery__card reveal">
+                    <div class="gallery__screen" style="background-image: url('assets/images/gallery/barbaria-man.jpg');">
+                        <div class="gallery__overlay">
+                            <a href="#contato" class="gallery__overlay-link">Quero um projeto assim <span>&rarr;</span></a>
+                        </div>
+                    </div>
+                    <div class="gallery__info">
+                        <span class="gallery__tag">Web</span>
+                        <h3>Barbaria Man</h3>
+                        <p class="gallery__desc">Site para barbearia, com apresentação de serviços, barbeiros e agendamento de horário online.</p>
+                        <a href="https://barbaria-man.vercel.app/" target="_blank" rel="noopener" class="gallery__visit">Ver site <span>&#8599;</span></a>
+                    </div>
+                </div>
+                <div class="gallery__card reveal">
+                    <div class="gallery__screen" style="background-image: url('assets/images/gallery/clinica-dentaria.jpg');">
+                        <div class="gallery__overlay">
+                            <a href="#contato" class="gallery__overlay-link">Quero um projeto assim <span>&rarr;</span></a>
+                        </div>
+                    </div>
+                    <div class="gallery__info">
+                        <span class="gallery__tag">Web</span>
+                        <h3>VistaDent</h3>
+                        <p class="gallery__desc">Site para clínica odontológica, com apresentação de serviços, dentistas e agendamento de consultas.</p>
+                        <a href="https://clinica-dentaria-eosin.vercel.app/" target="_blank" rel="noopener" class="gallery__visit">Ver site <span>&#8599;</span></a>
+                    </div>
+                </div>
+
+                <div class="gallery__card reveal">
+                    <div class="gallery__screen" style="background-image: url('assets/images/gallery/transport-logistic.jpg');">
+                        <div class="gallery__overlay">
+                            <a href="#contato" class="gallery__overlay-link">Quero um projeto assim <span>&rarr;</span></a>
+                        </div>
+                    </div>
+                    <div class="gallery__info">
+                        <span class="gallery__tag">Web</span>
+                        <h3>Transport Logistic</h3>
+                        <p class="gallery__desc">Site institucional para transportadora, com apresentação de serviços, projetos e orçamento online.</p>
+                        <a href="https://transport-logistic-eight.vercel.app/" target="_blank" rel="noopener" class="gallery__visit">Ver site <span>&#8599;</span></a>
+                    </div>
+                </div>
+
+                <div class="gallery__card reveal">
+                    <div class="gallery__screen" style="background-image: url('assets/images/gallery/coffee-delivery.jpg');">
+                        <div class="gallery__overlay">
+                            <a href="#contato" class="gallery__overlay-link">Quero um projeto assim <span>&rarr;</span></a>
+                        </div>
+                    </div>
+                    <div class="gallery__info">
+                        <span class="gallery__tag">Web</span>
+                        <h3>Coffee Delivery</h3>
+                        <p class="gallery__desc">E-commerce de café, com catálogo de produtos e carrinho de compras.</p>
+                        <a href="https://coffee-delivery-web-bj.vercel.app/" target="_blank" rel="noopener" class="gallery__visit">Ver site <span>&#8599;</span></a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="gallery__card reveal">
-        <div class="gallery__screen" style="background-image: url('assets/images/gallery/dr-joao-mendes.jpg');">
-          <div class="gallery__overlay">
-            <a href="#contato" class="gallery__overlay-link">Quero um projeto assim <span>&rarr;</span></a>
-          </div>
+    <!-- ===================== CONTATO ===================== -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="section-line"></span>
+                <h2>Fale Conosco</h2>
+                <p>Vamos conversar sobre o seu projeto e como podemos ajudar o seu negócio a crescer</p>
+            </div>
+
+            <div class="contact__grid">
+                <div class="contact__info reveal">
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                        </div>
+                        <div>
+                            <h3>E-mail</h3>
+                            <a href="mailto:contato@badjiinnovation.com">contato@badjiinnovation.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.8.3 1.6.5 2.4a2 2 0 0 1-.4 2.1L8.1 9.1a16 16 0 0 0 6 6l.9-1.1a2 2 0 0 1 2.1-.4c.8.2 1.6.4 2.4.5a2 2 0 0 1 1.7 2"/></svg>
+                        </div>
+                        <div>
+                            <h3>Telefone</h3>
+                            <a href="tel:+16475022938">+1 (647) 502-2938</a>
+                        </div>
+                    </div>
+
+
+                    <div class="contact__info-item">
+                        <div class="contact__info-icon">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                        </div>
+                        <div>
+                            <h3>Horário de Atendimento</h3>
+                            <p>Segunda a sexta, das 09h às 18h</p>
+                        </div>
+                    </div>
+
+                    <a class="contact__schedule" target="_blank" rel="noopener" href="https://wa.me/16475022938?text=Ol%C3%A1!%20Quero%20agendar%20uma%20consulta%20com%20a%20BadjiInnovation.">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.2c-5.4 0-9.8 4.4-9.8 9.8 0 1.7.5 3.4 1.3 4.9L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.4 0 9.8-4.4 9.8-9.8S17.4 2.2 12 2.2zm0 17.8c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3A7.9 7.9 0 0 1 4.2 12c0-4.3 3.5-7.8 7.8-7.8s7.8 3.5 7.8 7.8-3.5 8-7.8 8zm4.3-5.8c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.3.2-.4.1-.2 0-.3 0-.4-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 4 3.5.6.2 1 .4 1.3.5.6.2 1.1.1 1.5-.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"/></svg>                        Agende uma Consulta
+                    </a>
+                </div>
+
+                <form class="contact__form reveal" action="mailto:contato@badjiinnovation.com" method="post" enctype="text/plain">
+                    <div class="contact__form-row">
+                        <div class="contact__field">
+                            <label for="contactName">Nome</label>
+                            <input type="text" id="contactName" name="nome" placeholder="Seu nome" required>
+                        </div>
+                        <div class="contact__field">
+                            <label for="contactEmail">E-mail</label>
+                            <input type="email" id="contactEmail" name="email" placeholder="seu@email.com" required>
+                        </div>
+                    </div>
+                    <div class="contact__field">
+                        <label for="contactSubject">Assunto</label>
+                        <input type="text" id="contactSubject" name="assunto" placeholder="Sobre o que você quer falar?">
+                    </div>
+                    <div class="contact__field">
+                        <label for="contactMessage">Mensagem</label>
+                        <textarea id="contactMessage" name="mensagem" rows="5" placeholder="Conte um pouco sobre o seu projeto" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary contact__submit">Enviar Mensagem <span>&rarr;</span></button>
+                </form>
+            </div>
         </div>
-        <div class="gallery__info">
-          <span class="gallery__tag">Web</span>
-          <h3>Dr. João Mendes</h3>
-          <p class="gallery__desc">Site para consultório de cardiologia, com agendamento de consultas e apresentação de especialidades.</p>
-          <a href="https://dr-clinica.vercel.app/" target="_blank" rel="noopener" class="gallery__visit">Ver site <span>&#8599;</span></a>
-        </div>
-      </div>
+    </section>
 
-      <div class="gallery__card reveal">
-        <div class="gallery__screen" style="background-image: url('assets/images/gallery/issufi-badji-portfolio.jpg');">
-          <div class="gallery__overlay">
-            <a href="#contato" class="gallery__overlay-link">Quero um projeto assim <span>&rarr;</span></a>
-          </div>
-        </div>
-        <div class="gallery__info">
-          <span class="gallery__tag">Web</span>
-          <h3>Issufi Badji — Portfólio</h3>
-          <p class="gallery__desc">Site de portfólio pessoal, com apresentação profissional, serviços e depoimentos.</p>
-          <a href="https://www.issufibadji.dev/" target="_blank" rel="noopener" class="gallery__visit">Ver site <span>&#8599;</span></a>
-        </div>
-      </div>
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div class="footer__col footer__brand">
+                <a href="#inicio" class="footer__logo">
+                    <img src="assets/images/logo.png" alt="BadjiInnovation">
+                    <span>Badji<span>Innovation</span></span>
+                </a>
+                <p>Desenvolvemos soluções tecnológicas inteligentes para empresas que buscam inovação, eficiência e crescimento.</p>
+                <div class="footer__social">
+                    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12"/></svg></a>
+                    <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M22 5.9c-.7.3-1.5.6-2.3.7.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5v.1a4.1 4.1 0 0 0 3.3 4 4.2 4.2 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.9A8.3 8.3 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.1"/></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zm7 0h3.8v1.7h.05c.53-1 1.83-2 3.77-2 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21h-4z"/></svg></a>
+                    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.07 1.2.06 2 .24 2.7.5.8.3 1.4.7 2 1.3.6.6 1 1.2 1.3 2 .27.7.45 1.5.5 2.7.07 1.2.07 1.6.07 4.8s0 3.6-.07 4.8c-.06 1.2-.24 2-.5 2.7-.3.8-.7 1.4-1.3 2-.6.6-1.2 1-2 1.3-.7.27-1.5.45-2.7.5-1.2.07-1.6.07-4.8.07s-3.6 0-4.8-.07c-1.2-.06-2-.24-2.7-.5-.8-.3-1.4-.7-2-1.3-.6-.6-1-1.2-1.3-2-.27-.7-.45-1.5-.5-2.7C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.8c.06-1.2.24-2 .5-2.7.3-.8.7-1.4 1.3-2 .6-.6 1.2-1 2-1.3.7-.27 1.5-.45 2.7-.5C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.14 0-3.5 0-4.74.07-1 .05-1.6.2-1.97.35-.5.19-.85.42-1.22.8-.38.37-.6.72-.8 1.22-.14.36-.3.96-.35 1.97C3.8 8.5 3.8 8.86 3.8 12s0 3.5.07 4.74c.05 1 .2 1.6.35 1.97.2.5.42.85.8 1.22.37.38.72.6 1.22.8.36.14.96.3 1.97.35 1.24.07 1.6.07 4.74.07s3.5 0 4.74-.07c1-.05 1.6-.2 1.97-.35.5-.2.85-.42 1.22-.8.38-.37.6-.72.8-1.22.14-.36.3-.96.35-1.97.07-1.24.07-1.6.07-4.74s0-3.5-.07-4.74c-.05-1-.2-1.6-.35-1.97-.2-.5-.42-.85-.8-1.22-.37-.38-.72-.6-1.22-.8-.36-.14-.96-.3-1.97-.35C15.5 4 15.14 4 12 4zm0 3.6a4.4 4.4 0 1 1 0 8.8 4.4 4.4 0 0 1 0-8.8zm0 1.8a2.6 2.6 0 1 0 0 5.2 2.6 2.6 0 0 0 0-5.2zm5.6-2a1 1 0 1 1 0 2.1 1 1 0 0 1 0-2.1z"/></svg></a>
+                </div>
+            </div>
 
-      <div class="gallery__card reveal">
-        <div class="gallery__screen" style="background-image: url('assets/images/gallery/doctorcare.jpg');">
-          <div class="gallery__overlay">
-            <a href="#contato" class="gallery__overlay-link">Quero um projeto assim <span>&rarr;</span></a>
-          </div>
-        </div>
-        <div class="gallery__info">
-          <span class="gallery__tag">Web</span>
-          <h3>DoctorCare</h3>
-          <p class="gallery__desc">Landing page para clínica médica, com agendamento de consultas e estatísticas de atendimento.</p>
-          <a href="https://issufibadji.github.io/doctorCare/" target="_blank" rel="noopener" class="gallery__visit">Ver site <span>&#8599;</span></a>
-        </div>
-      </div>
+            <div class="footer__col">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#solucoes">Soluções</a></li>
+                    <li><a href="#experiencia">Resultados</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                </ul>
+            </div>
 
-      <div class="gallery__card reveal">
-        <div class="gallery__screen" style="background-image: url('assets/images/gallery/coffee-delivery.jpg');">
-          <div class="gallery__overlay">
-            <a href="#contato" class="gallery__overlay-link">Quero um projeto assim <span>&rarr;</span></a>
-          </div>
-        </div>
-        <div class="gallery__info">
-          <span class="gallery__tag">Web</span>
-          <h3>Coffee Delivery</h3>
-          <p class="gallery__desc">E-commerce de café, com catálogo de produtos e carrinho de compras.</p>
-          <a href="https://coffee-delivery-web-bj.vercel.app/" target="_blank" rel="noopener" class="gallery__visit">Ver site <span>&#8599;</span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== CONTATO ===================== -->
-<section class="contact" id="contato">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-line"></span>
-      <h2>Fale Conosco</h2>
-      <p>Vamos conversar sobre o seu projeto e como podemos ajudar o seu negócio a crescer</p>
-    </div>
-
-    <div class="contact__grid">
-      <div class="contact__info reveal">
-        <div class="contact__info-item">
-          <div class="contact__info-icon">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-          </div>
-          <div>
-            <h3>E-mail</h3>
-            <a href="mailto:contato@badjiinnovation.com">contato@badjiinnovation.com</a>
-          </div>
+            <div class="footer__col">
+                <h4>Fale Conosco</h4>
+                <ul class="footer__contact">
+                    <li>
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                        <a href="mailto:contato@badjiinnovation.com">contato@badjiinnovation.com</a>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.8.3 1.6.5 2.4a2 2 0 0 1-.4 2.1L8.1 9.1a16 16 0 0 0 6 6l.9-1.1a2 2 0 0 1 2.1-.4c.8.2 1.6.4 2.4.5a2 2 0 0 1 1.7 2"/></svg>
+                        <a href="tel:+16475022938">+1 (647) 502-2938</a>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                        <span>Segunda a sexta, das 09h às 18h</span>
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <div class="contact__info-item">
-          <div class="contact__info-icon">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.8.3 1.6.5 2.4a2 2 0 0 1-.4 2.1L8.1 9.1a16 16 0 0 0 6 6l.9-1.1a2 2 0 0 1 2.1-.4c.8.2 1.6.4 2.4.5a2 2 0 0 1 1.7 2"/></svg>
-          </div>
-          <div>
-            <h3>Telefone</h3>
-            <a href="tel:+16475022938">+1 (647) 502-2938</a>
-          </div>
+        <div class="footer__bottom">
+            <div class="container footer__bottom-inner">
+                <p>&copy; 2026 BadjiInnovation. Todos os direitos reservados.</p>
+            </div>
         </div>
+    </footer>
 
-
-        <div class="contact__info-item">
-          <div class="contact__info-icon">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-          </div>
-          <div>
-            <h3>Horário de Atendimento</h3>
-            <p>Segunda a sexta, das 09h às 18h</p>
-          </div>
-        </div>
-
-        <a class="contact__schedule" target="_blank" rel="noopener" href="https://wa.me/16475022938?text=Ol%C3%A1!%20Quero%20agendar%20uma%20consulta%20com%20a%20BadjiInnovation.">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.2c-5.4 0-9.8 4.4-9.8 9.8 0 1.7.5 3.4 1.3 4.9L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.4 0 9.8-4.4 9.8-9.8S17.4 2.2 12 2.2zm0 17.8c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3A7.9 7.9 0 0 1 4.2 12c0-4.3 3.5-7.8 7.8-7.8s7.8 3.5 7.8 7.8-3.5 8-7.8 8zm4.3-5.8c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.3.2-.4.1-.2 0-.3 0-.4-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 4 3.5.6.2 1 .4 1.3.5.6.2 1.1.1 1.5-.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"/></svg>
-          Agende uma Consulta
-        </a>
-      </div>
-
-      <form class="contact__form reveal" action="mailto:contato@badjiinnovation.com" method="post" enctype="text/plain">
-        <div class="contact__form-row">
-          <div class="contact__field">
-            <label for="contactName">Nome</label>
-            <input type="text" id="contactName" name="nome" placeholder="Seu nome" required>
-          </div>
-          <div class="contact__field">
-            <label for="contactEmail">E-mail</label>
-            <input type="email" id="contactEmail" name="email" placeholder="seu@email.com" required>
-          </div>
-        </div>
-        <div class="contact__field">
-          <label for="contactSubject">Assunto</label>
-          <input type="text" id="contactSubject" name="assunto" placeholder="Sobre o que você quer falar?">
-        </div>
-        <div class="contact__field">
-          <label for="contactMessage">Mensagem</label>
-          <textarea id="contactMessage" name="mensagem" rows="5" placeholder="Conte um pouco sobre o seu projeto" required></textarea>
-        </div>
-        <button type="submit" class="btn btn--primary contact__submit">Enviar Mensagem <span>&rarr;</span></button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== FOOTER ===================== -->
-<footer class="footer">
-  <div class="container footer__grid">
-    <div class="footer__col footer__brand">
-      <a href="#inicio" class="footer__logo">
-        <img src="assets/images/logo.png" alt="BadjiInnovation">
-        <span>Badji<span>Innovation</span></span>
-      </a>
-      <p>Desenvolvemos soluções tecnológicas inteligentes para empresas que buscam inovação, eficiência e crescimento.</p>
-      <div class="footer__social">
-        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12"/></svg></a>
-        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M22 5.9c-.7.3-1.5.6-2.3.7.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5v.1a4.1 4.1 0 0 0 3.3 4 4.2 4.2 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.9A8.3 8.3 0 0 1 2 18.4a11.6 11.6 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.1"/></svg></a>
-        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zm7 0h3.8v1.7h.05c.53-1 1.83-2 3.77-2 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21h-4z"/></svg></a>
-        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.07 1.2.06 2 .24 2.7.5.8.3 1.4.7 2 1.3.6.6 1 1.2 1.3 2 .27.7.45 1.5.5 2.7.07 1.2.07 1.6.07 4.8s0 3.6-.07 4.8c-.06 1.2-.24 2-.5 2.7-.3.8-.7 1.4-1.3 2-.6.6-1.2 1-2 1.3-.7.27-1.5.45-2.7.5-1.2.07-1.6.07-4.8.07s-3.6 0-4.8-.07c-1.2-.06-2-.24-2.7-.5-.8-.3-1.4-.7-2-1.3-.6-.6-1-1.2-1.3-2-.27-.7-.45-1.5-.5-2.7C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.8c.06-1.2.24-2 .5-2.7.3-.8.7-1.4 1.3-2 .6-.6 1.2-1 2-1.3.7-.27 1.5-.45 2.7-.5C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.14 0-3.5 0-4.74.07-1 .05-1.6.2-1.97.35-.5.19-.85.42-1.22.8-.38.37-.6.72-.8 1.22-.14.36-.3.96-.35 1.97C3.8 8.5 3.8 8.86 3.8 12s0 3.5.07 4.74c.05 1 .2 1.6.35 1.97.2.5.42.85.8 1.22.37.38.72.6 1.22.8.36.14.96.3 1.97.35 1.24.07 1.6.07 4.74.07s3.5 0 4.74-.07c1-.05 1.6-.2 1.97-.35.5-.2.85-.42 1.22-.8.38-.37.6-.72.8-1.22.14-.36.3-.96.35-1.97.07-1.24.07-1.6.07-4.74s0-3.5-.07-4.74c-.05-1-.2-1.6-.35-1.97-.2-.5-.42-.85-.8-1.22-.37-.38-.72-.6-1.22-.8-.36-.14-.96-.3-1.97-.35C15.5 4 15.14 4 12 4zm0 3.6a4.4 4.4 0 1 1 0 8.8 4.4 4.4 0 0 1 0-8.8zm0 1.8a2.6 2.6 0 1 0 0 5.2 2.6 2.6 0 0 0 0-5.2zm5.6-2a1 1 0 1 1 0 2.1 1 1 0 0 1 0-2.1z"/></svg></a>
-      </div>
-    </div>
-
-    <div class="footer__col">
-      <h4>Links Rápidos</h4>
-      <ul>
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#sobre">Sobre Nós</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#solucoes">Soluções</a></li>
-        <li><a href="#experiencia">Resultados</a></li>
-        <li><a href="#galeria">Galeria</a></li>
-      </ul>
-    </div>
-
-    <div class="footer__col">
-      <h4>Fale Conosco</h4>
-      <ul class="footer__contact">
-        <li>
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
-          <a href="mailto:contato@badjiinnovation.com">contato@badjiinnovation.com</a>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.8.3 1.6.5 2.4a2 2 0 0 1-.4 2.1L8.1 9.1a16 16 0 0 0 6 6l.9-1.1a2 2 0 0 1 2.1-.4c.8.2 1.6.4 2.4.5a2 2 0 0 1 1.7 2"/></svg>
-          <a href="tel:+16475022938">+1 (647) 502-2938</a>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-          <span>Segunda a sexta, das 09h às 18h</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer__bottom">
-    <div class="container footer__bottom-inner">
-      <p>&copy; 2026 BadjiInnovation. Todos os direitos reservados.</p>
-    </div>
-  </div>
-</footer>
-
-<!-- ===================== AÇÕES FLUTUANTES ===================== -->
-<div class="floating-actions">
-  <button type="button" class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <!-- ===================== AÇÕES FLUTUANTES ===================== -->
+    <div class="floating-actions">
+        <button type="button" class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
   </button>
 
-  <div class="wa-chat" id="waChat">
-    <div class="wa-chat__header">
-      <div class="wa-chat__avatar">
-        <img src="assets/images/logo.png" alt="BadjiInnovation">
-      </div>
-      <div class="wa-chat__info">
-        <strong>BadjiInnovation</strong>
-        <span><span class="wa-chat__dot"></span>Online agora</span>
-      </div>
-      <button type="button" class="wa-chat__close" id="waChatClose" aria-label="Fechar chat">
+        <div class="wa-chat" id="waChat">
+            <div class="wa-chat__header">
+                <div class="wa-chat__avatar">
+                    <img src="assets/images/logo.png" alt="BadjiInnovation">
+                </div>
+                <div class="wa-chat__info">
+                    <strong>BadjiInnovation</strong>
+                    <span><span class="wa-chat__dot"></span>Online agora</span>
+                </div>
+                <button type="button" class="wa-chat__close" id="waChatClose" aria-label="Fechar chat">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
       </button>
-    </div>
+            </div>
 
-    <div class="wa-chat__body" id="waChatBody">
-      <div class="wa-chat__bubble">👋 Olá! Bem-vindo à <strong>BadjiInnovation</strong>.</div>
-      <div class="wa-chat__bubble">Como podemos ajudar o seu negócio hoje?</div>
+            <div class="wa-chat__body" id="waChatBody">
+                <div class="wa-chat__bubble">👋 Olá! Bem-vindo à <strong>BadjiInnovation</strong>.</div>
+                <div class="wa-chat__bubble">Como podemos ajudar o seu negócio hoje?</div>
 
-      <div class="wa-chat__actions" id="waChatActions">
-        <button type="button" class="wa-chat__action" data-wa-text="Olá! Quero solicitar um orçamento para o meu projeto.">
+                <div class="wa-chat__actions" id="waChatActions">
+                    <button type="button" class="wa-chat__action" data-wa-text="Olá! Quero solicitar um orçamento para o meu projeto.">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
           Solicitar orçamento
         </button>
-        <button type="button" class="wa-chat__action" data-wa-text="Olá! Tenho uma dúvida sobre os serviços da BadjiInnovation.">
+                    <button type="button" class="wa-chat__action" data-wa-text="Olá! Tenho uma dúvida sobre os serviços da BadjiInnovation.">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 1 1 4.9 2.3c-.7.6-1.5 1.1-1.5 2.2"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           Tirar dúvida
         </button>
-        <button type="button" class="wa-chat__action" data-wa-text="Olá! Gostaria de agendar uma reunião com a equipe da BadjiInnovation.">
+                    <button type="button" class="wa-chat__action" data-wa-text="Olá! Gostaria de agendar uma reunião com a equipe da BadjiInnovation.">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           Agendar reunião
         </button>
-        <button type="button" class="wa-chat__action" data-wa-text="Olá! Preciso de suporte técnico com um projeto em andamento.">
+                    <button type="button" class="wa-chat__action" data-wa-text="Olá! Preciso de suporte técnico com um projeto em andamento.">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 1-5.6 5.6l-6.3 6.3 2 2 6.3-6.3a4 4 0 0 1 5.6-5.6l-2.8 2.8-2-2 2.8-2.8z"/></svg>
           Suporte técnico
         </button>
-      </div>
-    </div>
+                </div>
+            </div>
 
-    <a class="wa-chat__cta" id="waChatCta" target="_blank" rel="noopener" hidden>
-      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2.2c-5.4 0-9.8 4.4-9.8 9.8 0 1.7.5 3.4 1.3 4.9L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.4 0 9.8-4.4 9.8-9.8S17.4 2.2 12 2.2zm0 17.8c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3A7.9 7.9 0 0 1 4.2 12c0-4.3 3.5-7.8 7.8-7.8s7.8 3.5 7.8 7.8-3.5 8-7.8 8zm4.3-5.8c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.3.2-.4.1-.2 0-.3 0-.4-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 4 3.5.6.2 1 .4 1.3.5.6.2 1.1.1 1.5-.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"/></svg>
-      Continuar no WhatsApp
-    </a>
-  </div>
+            <a class="wa-chat__cta" id="waChatCta" target="_blank" rel="noopener" hidden>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2.2c-5.4 0-9.8 4.4-9.8 9.8 0 1.7.5 3.4 1.3 4.9L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.4 0 9.8-4.4 9.8-9.8S17.4 2.2 12 2.2zm0 17.8c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3A7.9 7.9 0 0 1 4.2 12c0-4.3 3.5-7.8 7.8-7.8s7.8 3.5 7.8 7.8-3.5 8-7.8 8zm4.3-5.8c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.3.2-.4.1-.2 0-.3 0-.4-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 4 3.5.6.2 1 .4 1.3.5.6.2 1.1.1 1.5-.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"/></svg>                Continuar no WhatsApp
+            </a>
+        </div>
 
-  <button type="button" class="whatsapp-btn" id="waChatToggle" aria-label="Fale conosco pelo WhatsApp" aria-expanded="false">
+        <button type="button" class="whatsapp-btn" id="waChatToggle" aria-label="Fale conosco pelo WhatsApp" aria-expanded="false">
     <svg class="whatsapp-btn__icon whatsapp-btn__icon--wa" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 2.2c-5.4 0-9.8 4.4-9.8 9.8 0 1.7.5 3.4 1.3 4.9L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.4 0 9.8-4.4 9.8-9.8S17.4 2.2 12 2.2zm0 17.8c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3A7.9 7.9 0 0 1 4.2 12c0-4.3 3.5-7.8 7.8-7.8s7.8 3.5 7.8 7.8-3.5 8-7.8 8zm4.3-5.8c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.3.2-.4.1-.2 0-.3 0-.4-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 4 3.5.6.2 1 .4 1.3.5.6.2 1.1.1 1.5-.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"/></svg>
     <svg class="whatsapp-btn__icon whatsapp-btn__icon--close" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
     <span>Fale no WhatsApp</span>
   </button>
-</div>
+    </div>
 
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>
